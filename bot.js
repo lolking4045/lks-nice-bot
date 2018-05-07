@@ -1,12 +1,15 @@
 const Discord = require('discord.js');
-const bot = new Discord.Client();
+const client = new Discord.Client();
 
-bot.on('message', (message) => {
-
-    if(message.content == 'wow') {
-        //message.reply('thats pretty nice')
-        message.channel.sendMessage('thats pretty nice');
-    }
+client.on('ready', () => {
+    console.log('At your service sir');
 });
 
+client.on('message', message => {
+    if (message.content === 'wow') {
+    	message.reply('thats pretty nice');
+  	}
+});
+
+// THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
