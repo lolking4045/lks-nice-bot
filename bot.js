@@ -7,7 +7,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === 'wow') {
-    	message.reply('thats pretty nice');
+        message.channel.sendMessage('thats pretty nice');
   	}
 });
 
